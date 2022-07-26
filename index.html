@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur & Grayscale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="image column">
+        <img src="src/img1.jpg" alt="Большая мечеть шейха Зайда" name="image" id="image">
+        <div class="pick-img" id="pick-img">
+            <input type="radio" name="img-option" value="img1" onClick="changeImage('img1.jpg');">
+            <input type="radio" name="img-option" value="img2" onClick="changeImage('img2.jpg');">
+            <input type="radio" name="img-option" value="img3" onClick="changeImage('img3.jpg');">
+        </div>
+
+        <div><a href="https://en.wikipedia.org/wiki/Sheikh_Zayed_Grand_Mosque" target="_blank">Большая мечеть шейха Зайда</a></div>
+    </div>    
+
+    <div class="controls column">
+        <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+        <p>sdfsdfs</p>
+        <p>sdfsdfds</p>
+        <p>dfgdfg</p>
+    </div>  
+  </div>
+  <style>
+   /* css variables here */
+       
+  </style>
+
+  <script>
+    function changeImage(imgName) {
+      let image = document.getElementById('image');
+      image.src = './src/' + imgName;      
+    }
+
+    
+  </script>
+
+  
+</body>
+</html>
