@@ -11,7 +11,7 @@
     <div class="wrapper">
     <div class="image column">
         <img src="src/img1.jpg" alt="Большая мечеть шейха Зайда" name="image" id="image">
-        <div class="pick-img" id="pick-img">
+        <div class="pick-img">
             <input type="radio" name="img-option" value="img1" onClick="changeImage('img1.jpg');">
             <input type="radio" name="img-option" value="img2" onClick="changeImage('img2.jpg');">
             <input type="radio" name="img-option" value="img3" onClick="changeImage('img3.jpg');">
@@ -21,22 +21,46 @@
     </div>    
 
     <div class="controls column">
-        <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
-        <p>sdfsdfs</p>
-        <p>sdfsdfds</p>
-        <p>dfgdfg</p>
+        <h2>Update CSS Variables with <span class='h1'>JS</span></h2>
+        
+        <label for="spacing">Spacing:</label>
+        <input type="range" name="spacing" id="spacing" min="10" max="10" value="10" data-sizing="px">
+        <br>
+        <label for="blur">Blur:</label>
+        <input type="range" name="blur" id="blur" min="0" max="25" value="10" data-sizing="px">
+        <br>
+        <label for="color">Base Color:</label>
+        <input type="color" name="base" id="base" value="#ffc600">
+        <br>
     </div>  
   </div>
   <style>
-   /* css variables here */
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 1px;
+    }
+
+    .h1 {
+      color: var(--base);
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
        
   </style>
 
   <script>
+    // change image with radio buttons 
     function changeImage(imgName) {
       let image = document.getElementById('image');
       image.src = './src/' + imgName;      
     }
+
+
 
     
   </script>
