@@ -48,6 +48,10 @@ input {
     width: 100px;
 }
 
+.controls div {
+    margin-top: 40px;
+}
+
 @media screen and (max-width: 768px) {
     .wrapper {
         flex-direction: column-reverse;
